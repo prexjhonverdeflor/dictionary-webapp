@@ -1,0 +1,95 @@
+@font-face {
+  font-family: 'Lora';
+  src: url('./assets/fonts/lora/Lora-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Lora', serif;
+  width: 30%;
+  margin: 50px auto;
+}
+
+.logo {
+  width: 60px;
+}
+
+.head {
+  margin-bottom: 0px;
+}
+
+.meaning {
+  font-style: italic;
+}
+
+.play {
+  margin-top: -30px;
+  color: green;
+  float: right;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.search-icon {
+  cursor: pointer;
+  color: #888;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  body {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .logo {
+    width: 25vw;
+    max-width: 80px;
+  }
+
+  .head {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .meaning {
+    font-size: 1rem;
+  }
+
+  .play {
+    font-size: 5vw;
+    margin-top: -20px;
+  }
+
+  .search-icon {
+    font-size: 4vw;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    width: 85%;
+    margin: 10px auto;
+  }
+
+  .logo {
+    width: 30vw;
+    max-width: 60px;
+  }
+
+
+
+  .meaning {
+    font-size: 0.9rem;
+  }
+
+  .play {
+    font-size: 15vw;
+    margin-top: -30px;
+  }
+
+  .search-icon {
+    font-size: 5vw;
+  }
+}
