@@ -63,7 +63,7 @@ export default {
           `https://api.dictionaryapi.dev/api/v2/entries/en/${this.searchQuery}`
         );
         this.wordData = response.data[0];
-        console.log(this.wordData); // Log the entire word data for debugging
+        console.log(this.wordData);
       } catch (error) {
         console.error("Error fetching word data:", error);
         ElMessage.error('Word not found.')
