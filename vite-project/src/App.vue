@@ -11,13 +11,15 @@
       </template>
     </el-input>
 
-    <div v-if="wordData" >
+    <div v-if="wordData">
       <h1 class="head">{{ wordData.word }}</h1>
+
       <el-icon class="play" @click="playAudio">
         <VideoPlay />
       </el-icon>
       <p style="color: green;">{{ wordData.phonetic }}</p>
 
+      <!-- desc bullets -->
       <div v-for="(meaning, index) in wordData.meanings" :key="index">
         <el-divider content-position="left">
           <p class="meaning">{{ meaning.partOfSpeech }}</p>
@@ -27,13 +29,12 @@
             {{ definition.definition }}
           </li>
         </ul>
+
+        <span class="meaning">Synonyms:</span>&nbsp;
+        <span style="color: green;">
+          {{ meaning.synonyms.join(", ") || " No synonyms available" }}
+        </span>
       </div>
-
-      <span class="meaning">Synonyms:</span>&nbsp;
-      <span style="color: green;">
-        {{ wordData.synonyms?.join(", ") || " No synonyms available" }}
-      </span>
-
       <p>
         Source:
         <el-link :href="wordData.sourceUrls" target="_blank">{{ wordData.sourceUrls }}</el-link>
